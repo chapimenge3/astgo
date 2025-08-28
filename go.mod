@@ -1,4 +1,4 @@
-module github.com/wenerme/astgo
+module github.com/chapimenge3/astgo
 
 go 1.16
 
