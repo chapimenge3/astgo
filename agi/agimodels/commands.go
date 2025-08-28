@@ -309,9 +309,11 @@ func (cmd GetDataCommand) SetMaxdigits(v string) GetDataCommand {
 	return cmd
 }
 
-func (c *Client) GetData(file string) Response {
+func (c *Client) GetData(file string, timeout int, maxdigits string) Response {
 	return c.Handler.Command(GetDataCommand{
-		File: file,
+		File:      file,
+		Timeout:   &timeout,
+		Maxdigits: &maxdigits,
 	})
 }
 
